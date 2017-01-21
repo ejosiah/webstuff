@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Bézier Curves</title>
+		<script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	</head>
+	<body>
+		<h1>Bézier Curves</h1>
+		<article>
+			<h2>Linear Bézier Curves</h2>
+			<p>Let’s start with the simplest case, where there are only two control points P0 and P1. The Bézier curve c approximating P0 and P1 is, simply, the straight line segment joining the two. We write the parametric equation of c as follows:
+			$$x = { c(u) = (1 - u)P_{0} + uP_{1}}.$$ &nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;&nbsp;&nbsp;&nbsp;$(0 \leq u \leq 1)$
+
+		</p>
+		<canvas id="linear-bezier">
+				Linear bezier Image
+		</canvas>
+		</article>
+	</body>
+</html>
