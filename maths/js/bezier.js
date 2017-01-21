@@ -48,7 +48,7 @@
 
 	function drawLine(ctx, points, color){
 		var p0, p1;
-		color = color || "green";
+		color = color || "rgb(0, 255, 0)";
 		ctx.beginPath();
 		ctx.strokeStyle = color;
 		for(var i = 0; i < points.length - 1; i++){
@@ -108,7 +108,7 @@
 		var a, b;
 
 		ctx.beginPath();
-		ctx.strokeStyle = "green";
+		ctx.strokeStyle = "rgb(0, 255, 0)";
 		ctx.moveTo(p0.x, p0.y);
 		ctx.lineTo(p1.x, p1.y);
 		ctx.moveTo(p1.x, p1.y);
@@ -126,7 +126,7 @@
 		ctx.fillText("P2", p2.x, p2.y + 15);
 
 		ctx.beginPath();
-		ctx.strokeStyle = "green";
+		ctx.strokeStyle = "rgb(0, 255, 0)";
 		for(var u = 0.0; u < 1.0; u += 0.01){
 			a = bezierCurve(u, p0, p1, p2);
 			b = bezierCurve(u + 0.01, p0, p1, p2);
@@ -140,7 +140,7 @@
 		b = bezierCurve(0.3, p1, p2);
 		c = bezierCurve(0.3, p0, p1, p2);
 		ctx.beginPath();
-		ctx.strokeStyle = "green";
+		ctx.strokeStyle = "rgb(0, 255, 0)";
 		ctx.moveTo(a.x, a.y);
 		ctx.lineTo(b.x, b.y);
 		ctx.stroke();
@@ -193,7 +193,7 @@
 		drawLine(ctx, [origin, new Point(w - 5, origin.y)], "black");
 
 		ctx.beginPath();
-		ctx.strokeStyle = "green";
+		ctx.strokeStyle = "rgb(0, 255, 0)";
 
 		a = origin;
 		b = origin;
