@@ -18,10 +18,10 @@
 					Linear bezier Image
 				</canvas>
 				<p>The Bézier curve c approximating P0 and P1 is, simply, the straight line segment joining the two. We write the parametric equation of c as follows:</p>
-				<p class="block-formula">$c(u) = (1 - u)P_{0} + uP_{1}$ <span class="inline">where $(0 \leq u \leq 1)$</span><span class="inline">(1)</span></p>
+				<p class="block-formula">$c(u) = (1 - u)P_{0} + uP_{1}$ <span class="inline">$(0 \leq u \leq 1)$</span><span class="inline">(1)</span></p>
 				<p>The parametric equation (1.0) can be written as</p>
-				<p class="block-formula">$c(u) = B_{0,1}(u)P_{0} + B_{1,1}(u)P_{1}$ <span class="inline">where $(0 \leq u \leq 1)$</span><span class="inline">(2)</span></p>
-				<p>where 1 - u (of the first control point) and u (of the second control point)  are know as the <spam class="highlight_it">Bernstein polynomials</spam> of degree 1. They are denoted by $B_{0,1}$ and $B_{1,1}$</p>
+				<p class="block-formula">$c(u) = B_{0,1}(u)P_{0} + B_{1,1}(u)P_{1}$ <span class="inline">$(0 \leq u \leq 1)$</span><span class="inline">(2)</span></p>
+				<p>where 1 - u (of the first control point) and u (of the second control point)  are know as the <span class="highlight_it">Bernstein polynomials</span> of degree 1. They are denoted by $B_{0,1}$ and $B_{1,1}$</p>
 			</div>
 			<div>
 				<h2>Quadratic Bézier curves</h2>
@@ -49,11 +49,23 @@
 					</li>
 				</ol>
 				<p>Substituting the expressions for a(u) and b(u) into that for c(u), one obtains the parametric equation for a curve c:</p>
-				<p class="block-formula">$c(u) = (1 - u)^{2}P_{0} + 2(1 - u)uP_{1} + u^{2}P_{2}$ <span class="inline">where $(0 \leq u \leq 1)$</span><span class="inline">(3)</span></p>
-                <p>The parametric equation (3) can be rewritten using the Bernstein polynomials of degree 2 as:</p>
-                <p class="block-formula">$c(u) = B_{0,2}(u)P_{0} + B_{1,2}(u)P_{1} + B_{2,2}(u)P_{2}$ <span class="inline">where $(0 \leq u \leq 1)$</span><span class="inline">(4)</span></p>
-
-            </div>
+				<p class="block-formula">$c(u) = (1 - u)^{2}P_{0} + 2(1 - u)uP_{1} + u^{2}P_{2}$ <span class="inline">$(0 \leq u \leq 1)$</span><span class="inline">(3)</span></p>
+				<p>The parametric equation (3) can be rewritten using the Bernstein polynomials of degree 2 as:</p>
+				<p class="block-formula">$c(u) = B_{0,2}(u)P_{0} + B_{1,2}(u)P_{1} + B_{2,2}(u)P_{2}$ <span class="inline">$(0 \leq u \leq 1)$</span><span class="inline">(4)</span></p>
+			</div>
+			<div>
+				<h2>General Bézier Curves</h2>
+				<p>The parametric equation for a Bézier curve c approximating n+1 controll points $P_{0}$, $P_{1}$, ...,$P_{n}$ is: </p>
+				<p class="block-formula">$c(u) = \sum_{i=0}^nB_{i,n}(u)P_{i}$<span class="inline">$(0 \leq u \leq 1)$</span><span class="inline">(4)</span></p>
+				<p>where $B_{i,n}(u)$, $(0 \leq i \leq n)$, called the ith <span class="highlight_it">Bernstein polynomials</span> of degree n is given by</p>
+				<p class="block-formula">$\binom{n}{i}(1 - u)^{n-i}u^{i}$<span class="inline">(5)</span></p>
+				<p>where $\binom{n}{i} = \frac{n!}{(n - i)!i!}$ is a binomial coefficient. The curve c is called a curve of degree n, or order n + 1</p>
+			</div>
+			<div>
+				<h2>Bézier Surfaces</h2>
+				<p>The parametric equation for a Bézier surface s approximating $(n + 1) \times (m + 1)$ array of control points is:</p>
+				<p class="block-formula">$s(u, v) = \sum_{i=0}^n\sum_{j=0}^mB_{i,n}(u)B_{j,m}(v)P_{i,j}$ <span class="inline">$(0 \leq u \leq 1, 0 \leq v \leq 1)$</span><span class="inline">(6)</span></p>
+			</div>
 		</article>
 	</body>
 </html>

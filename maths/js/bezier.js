@@ -157,6 +157,9 @@
 		ctx.fillText("c(u)", c.x, c.y + 10 );
 		drawPoint(c, ctx);
 
+		ctx.fillText("(b)", w/2, h - 5);
+
+
 	}
 
 	function drawUnhappyThreeControlPoints(){
@@ -178,6 +181,9 @@
 
 		drawPoint(p2, ctx);
 		ctx.fillText("P2", p2.x, p2.y + 10);
+
+		ctx.fillStyle = "black";
+		ctx.fillText("(a)", w/2, h - 10);
 	}
 
 	function drawBernsteiinPolynomials(){
