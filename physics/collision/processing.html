@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hard Constraints - Collision Processing</title>
+    <link rel="stylesheet" type="text/css" href="../../style/main.css" />
+    <script type="text/x-mathjax-config">
+  			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+<article id="main">
+    <h1>Hard Constraints</h1>
+    <article>
+    <h2>Collision processing</h2>
+
+        <div class="algorithm">
+            <h3>Contact resolution summary</h3>
+            <div>
+                <h4>resolve velocity</h4>
+                <p><span class="inline-formula">$\nu_{s} = (\dot{P_{a}} - \dot{P_{b}}) \cdot \hat{n}$</span><span class="comment">calculate initial separating velocity</span> </p>
+                <p><span class="inline-formula">if $\nu_{s} = 0$</span> return; <span class="comment">// particles are not colliding</span></p>
+                <p><span class="inline-formula">$\nu_{s}' = -c\nu_{s}$</span><span class="comment"> // calculate separating velocity after collision</span></p>
+                <p><span class="inline-formula">$\Delta \nu_{s} = \nu_{s}' - \nu_{s}$</span><span class="comment">calculate new separating velocity</span> </p>
+                <p><span class="inline-formula">if $\sum\frac{1}{m} <= 0$</span> return  <span class="comment">// exit if inverse mass is less than zero</span></p>
+                <p><span class="inline-formula">$g = \Delta \nu_{s} \times \sum \frac{1}{m}$</span> <span class="comment">// calculate scala impulse</p>
+                <p><span class="inline-formula">$ G = \hat{n} \times g$</span>  <span class="comment">// calculate impulse vector</span></p>
+                <p><span class="inline-formula">$ \dot{P_{a}}' = \dot{P_{a}} + \frac{1}{m} G $</span>  <span class="comment">// apply impulse for particle a</span></p>
+                <p><span class="inline-formula">$ \dot{P_{b}}' = \dot{P_{b}} - \frac{1}{m} G $</span>  <span class="comment">// apply impulse for particle b</span></p>
+            </div>
+            <div>
+                <h4>resolve interpenetration</h4>
+                <span class="comment">// TODO implementation</span>
+            </div>
+        </div>
+    </article>
+    <article>
+        <h2>Collision Detection</h2>
+    </article>
+</article>
+</body>
+</html>
