@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Sphere</title>
+		<title>Cloth</title>
 		<link rel="stylesheet" type="text/css" href="../style/main.css" />
 		<script type="text/x-mathjax-config">
   			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -29,6 +29,12 @@
                 $\large{\mathbf{F}_{extern} = m\mathbf{g} + k_{wind}|(\mathbf{W} - \mathbf{V})\cdot\mathbf{N}|}$
             </p>
             <p>where $\mathbf{g}$ is the acceleration of gravity, $\mathbf{W}$ is the velocity of the wind, and $\mathbf{N}$ is the surface normal at the particle's location</p>
+        </div>
+        <div>
+            <h2>Summary</h2>
+            <p class="block-formula">
+                $\large{\mathbf{f} = \frac{\mathbf{X}_{j} - \mathbf{X}_{i}}{|\mathbf{X}_{j} - \mathbf{X}_{i}|}[k_{s}(|\mathbf{X}_{j} - \mathbf{X}_{i}| - l_{0}) + k_{d}(\mathbf{V}_{j} - \mathbf{V}_{i})\cdot\frac{\mathbf{X}_{j} - \mathbf{X}_{i}}{|\mathbf{X}_{j} - \mathbf{X}_{i}|}]}$
+            </p>
         </div>
 		</article>
 	</body>
