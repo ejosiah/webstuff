@@ -54,15 +54,22 @@
 
                     return false;
                 };
-
+                document.getElementById("clear").onclick = function(){
+                    document.getElementById('user_pi').value = "";
+                    document.getElementById("result").innerHTML = ""
+                    return false;
+                }
 
             };
         </script>
     </head>
     <body>
+        <h1>&pi; checker</h1>
+        <p>input &pi; to however many decimal places, press check to confirm</p>
         <form id="checker" autocomplete="off">
             <input id="user_pi" type="text" size="50" />
             <input type="submit" value="check" />
+            <input type="submit" value="clear" id="clear" />
             <!-- <div>
                <input type="checkbox" id="two_pi"/> <label>2&Pi;</label>
             </div> -->
